@@ -17,26 +17,55 @@ function OrderPage() {
     });
 
     return (
-        <div>
-            <h1 className="site-header">
-                <nav>
-                    <Link to="/" className="logo">MyStore</Link>
-                    <ul className="nav-links">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/order" className="active">Orders</Link></li>
-                        <li><Link to="/profile">Profile</Link></li>
-                    </ul>
-                </nav>
-            </h1>
-
-            <main className="order-container">
-                {/* …rest of your JSX… */}
-            </main>
-
-            <footer className="site-footer">
-                <p>© 2025 MyStore. All rights reserved.</p>
-            </footer>
-        </div>
+            <div>
+                <h1>Order Page</h1>
+                <form>
+                    <div>
+                        <label>First Name: </label>
+                    <   input type="text" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} />
+                    </div>                    
+                    <div>
+                        <label>Last Name: </label>
+                        <input type="text" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>Email: </label>
+                        <input type="text" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>Phone: </label>
+                        <input type="text" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>Address 1: </label>
+                        <input type="text" value={formData.address1} onChange={(e) => setFormData({ ...formData, address1: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>Address 2: </label>
+                        <input type="text" value={formData.address2} onChange={(e) => setFormData({ ...formData, address2: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>City: </label>
+                        <input type="text" value={formData.city} onChange={(e) => setFormData({ ...formData, city: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>State: </label>
+                        <input type="text" value={formData.state} onChange={(e) => setFormData({ ...formData, state: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>Zip: </label>
+                        <input type="text" value={formData.zip} onChange={(e) => setFormData({ ...formData, zip: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>Country: </label>
+                        <input type="text" value={formData.country} onChange={(e) => setFormData({ ...formData, country: e.target.value })} />
+                    </div>
+                    <div>
+                        <label>Description: </label>
+                        <textarea value={formData.description} onChange={(e) => setFormData({ ...formData, description: e.target.value })} />
+                    </div>
+                </form>
+            </div>
 
     );
 };
