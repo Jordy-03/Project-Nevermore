@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import './App.css'
-import PayPal from './Components/PayPal.jsx'
+import './App.css';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import HomePage from './pages/HomePage';
+import OrderPage from './pages/OrderPage';
 
 function App() {
-  const [checkout, setCheckout] = useState(false)
-
   return (
-    <div className="App">
-    {checkout ? (
-      <PayPal />
-    ) : (
-      <button onClick={
-        () => setCheckout(true)
-      }>Checkout</button>
-    )}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />}  />
+        <Route path ="/order" element={<OrderPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
