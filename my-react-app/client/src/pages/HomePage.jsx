@@ -8,6 +8,11 @@ function HomePage() {
         <p>To place an order, please refer to the 
             following <Link to="/order">Link</Link>.
         </p>
+        <p />
+        <p>
+            To create a booking, please use the following
+            <Link to="/booking">link</Link> to book
+        </p>
     </div>
     )
 }
